@@ -10,10 +10,13 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
-body {
+*::selection {
+  background: rgba(121, 212, 255, 0.37);
+}
+body {}
+.dark-bg {
   background: $dark;
 }
-
 /*
   Don't touch
  */
@@ -40,3 +43,113 @@ body {
 /*
   Don't touch
  */
+
+.container-d {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  .content {
+    margin: 15px;
+    color: #ffffff;
+    h1,h2,h3,h4,h5,h6 {
+      color: $accent-color;
+    }
+    .elements {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .block {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: flex-start;
+      border-bottom: solid $accent-color 2px;
+      padding: 10px;
+      flex-direction: column;
+    }
+  }
+}
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  .content {
+    margin: 15px;
+    color: #000000;
+    h1,h2,h3,h4,h5,h6 {
+      color: $dark;
+    }
+    .elements {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .block {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: flex-start;
+      border-bottom: solid $dark 2px;
+      padding: 10px;
+      flex-direction: column;
+    }
+  }
+}
+
+button {
+  user-select: none;
+  padding: 14px;
+  outline: none;
+  background: $white;
+  border: none;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    background: $accent-color;
+  }
+}
+input[type=button] {
+  user-select: none;
+  padding: 14px;
+  outline: none;
+  background: $white;
+  border: none;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    background: $accent-color;
+  }
+}
+.btn-dark {
+  background: $accent-color;
+  color: $white;
+  &:active {
+    background: $dark;
+  }
+}
+.btn-shin {
+  box-shadow: inset rgba(0, 0, 0, 0.50) 0 -5px 2px 0;
+  &:hover {
+    cursor: pointer;
+    box-shadow: inset rgba(0, 0, 0, 0.50) 0 -2px 2px 0;
+  }
+}
+.btn-outl {
+  border: solid darken($dark, 50%) 2px;
+}
+.btn-fix-width {
+  width: 150px;
+}
