@@ -8,7 +8,35 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 body {
   background: $dark;
 }
+
+/*
+  Don't touch
+ */
+
+.opt-centered {
+  user-select: none;
+
+  display: flex;
+  height: 100vh;
+
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+}
+.opt-h1 {
+  color: $accent-color;
+}
+.opt-p {
+  color: #ffffff;
+  margin-top: 15px;
+}
+
+/*
+  Don't touch
+ */
